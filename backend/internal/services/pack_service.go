@@ -126,7 +126,6 @@ func CalculatePacks(orderQuantity int, packSizes []int) models.PackCalculation {
 	// Define the maximum possible reasonable order we need to consider
 	maxPossibleOrder := orderQuantity + packSizes[len(packSizes)-1]
 
-	// Define a more efficient solution struct
 	type solution struct {
 		totalItems int
 		packs      map[int]int
@@ -164,8 +163,7 @@ func CalculatePacks(orderQuantity int, packSizes []int) models.PackCalculation {
 				currentTotalPacks += count
 			}
 			
-			// Better solution if:
-			// 1. Total items is less, OR
+
 			// 2. Total items equal but fewer total packs
 			isBetter := newTotalItems < dp[quantity].totalItems || 
 				(newTotalItems == dp[quantity].totalItems && prevTotalPacks+1 < currentTotalPacks)
