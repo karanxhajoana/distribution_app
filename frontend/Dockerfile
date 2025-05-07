@@ -13,6 +13,8 @@ COPY . .
 # Build the application
 RUN npm run build
 
+ENV NEXT_PUBLIC_API_URL=https://backend-production-4511.up.railway.app
+
 # Production stage
 FROM node:18-alpine
 
