@@ -1,0 +1,9 @@
+[services.frontend]
+sourceDir = "frontend"
+dockerfilePath = "frontend/Dockerfile"
+port = 3000
+
+[services.backend]
+sourceDir = "backend"
+dockerfilePath = "backend/Dockerfile"
+port = 8080
