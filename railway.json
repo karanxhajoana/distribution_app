@@ -1,17 +1,15 @@
 {
-  "services": {
-    "next-app": {
-      "sourceDir": "next-app",
-      "startCommand": "npm start",
-      "installCommand": "npm install",
-      "buildCommand": "npm run build",
-      "dockerfilePath": "next-app/Dockerfile",
-      "port": 3000
-    },
-    "go-api": {
-      "sourceDir": "go-api",
-      "dockerfilePath": "go-api/Dockerfile",
-      "port": 8080
+    "services": {
+      "frontend": {
+        "sourceDir": "frontend",
+        "dockerfilePath": "frontend/Dockerfile",
+        "port": 3000
+      },
+      "backend": {
+        "sourceDir": "backend",
+        "dockerfilePath": "backend/Dockerfile",
+        "port": 8080
+      }
     }
   }
-}
+  
